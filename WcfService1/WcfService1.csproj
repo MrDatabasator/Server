@@ -116,6 +116,10 @@
     </Compile>
     <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tables\tbDaemon.cs" />
+    <Compile Include="Tables\tbDestination.cs" />
+    <Compile Include="Tables\tbLog.cs" />
+    <Compile Include="Tables\tbTask.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

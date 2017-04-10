@@ -13,6 +13,7 @@ namespace WcfService1
         [Key]
         public int Id { get; set; }
         public string Type { get; set; }
+        [Browsable(false)]
         public virtual List<tbTask> LTask { get; set; }
     }
 }

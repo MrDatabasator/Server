@@ -14,6 +14,7 @@ namespace WcfService1
     {
         public tbDaemon GetDaemon(Object o)
         {
+            //test
             return o as tbDaemon;
         }
         public string GetData(int value)

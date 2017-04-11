@@ -15,7 +15,6 @@ namespace WcfService1
         public int DaemonId { get; set; }
         public string KornExpression { get; set; }
         public int TaskFinished { get; set; }
-        [Browsable(false)]
         public virtual List<tbDestination> LDestination { get; set; }
 
     }

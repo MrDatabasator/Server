@@ -12,6 +12,8 @@ namespace WcfService1
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        tbDaemon GetDaemon(Object o); 
 
         [OperationContract]
         string GetData(int value);

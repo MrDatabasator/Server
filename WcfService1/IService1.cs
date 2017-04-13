@@ -13,6 +13,9 @@ namespace WcfService1
     public interface IService1
     {
         [OperationContract]
+        void UploadDaemon(tbDaemon d);
+
+        [OperationContract]
         tbDaemon GetDaemon(Object o); 
 
         [OperationContract]

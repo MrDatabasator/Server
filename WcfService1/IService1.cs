@@ -30,6 +30,21 @@ namespace WcfService1
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
+    public class Daemon
+    {
+        [DataMember]
+        public int Id { get; set; }
+        [DataMember]
+        public string DaemonName { get; set; }
+        [DataMember]
+        public string PcName { get; set; }
+        [DataMember]
+        public DateTime LastActive { get; set; }
+        [DataMember]
+        public string IpAddress { get; set; }
+    }
+
+    [DataContract]
     public class CompositeType
     {
         bool boolValue = true;

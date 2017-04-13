@@ -13,10 +13,10 @@ namespace WcfService1
     public interface IService1
     {
         [OperationContract]
-        void UploadDaemon(tbDaemon d);
+        void UploadDaemon(Object o);
 
         [OperationContract]
-        tbDaemon GetDaemon(Object o); 
+        Object GetDaemon(Object o); 
 
         [OperationContract]
         string GetData(int value);

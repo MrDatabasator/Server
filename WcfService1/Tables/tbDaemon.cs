@@ -15,6 +15,7 @@ namespace WcfService1
         public string DaemonName { get; set; }
         public string PcName { get; set; }
         public DateTime LastActive { get; set; }
+        public string IpAddress { get; set; }
 
     }
 }

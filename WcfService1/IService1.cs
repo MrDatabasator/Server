@@ -16,7 +16,7 @@ namespace WcfService1
         void UploadDaemon(Object o);
 
         [OperationContract]
-        Object GetDaemon(Object o); 
+        Daemon GetDaemon(Daemon o); 
 
         [OperationContract]
         string GetData(int value);
@@ -30,6 +30,7 @@ namespace WcfService1
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
+    [Serializable()]
     public class Daemon
     {
         [DataMember]

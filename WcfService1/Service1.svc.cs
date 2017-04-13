@@ -18,10 +18,11 @@ namespace WcfService1
             dr.InsertDaemon(o as tbDaemon);
 
         }
-        public Object GetDaemon(Object o)
+        public Daemon GetDaemon(Daemon o)
         {
             //test
-            return o as tbDaemon;
+            o.DaemonName = "Server Upravil biš";
+            return o;
         }
         public string GetData(int value)
         {

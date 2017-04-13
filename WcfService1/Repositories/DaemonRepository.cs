@@ -6,6 +6,7 @@ using System.Web;
 namespace WcfService1
 {
     public class DaemonRepository
+        //just for upload
     {
         private MyContext _context = new MyContext();
 

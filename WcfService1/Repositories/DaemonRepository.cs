@@ -28,5 +28,9 @@ namespace WcfService1
             this._context.Daemon.Remove(d);
             this._context.SaveChanges();
         }
+        public void Test(string st)
+        {
+            
+        } 
     }
 }

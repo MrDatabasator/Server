@@ -13,6 +13,9 @@ namespace WcfService1
     public interface IService1
     {
         [OperationContract]
+        void UploadString(string s);
+
+        [OperationContract]
         void UploadDaemon(Object o);
 
         [OperationContract]

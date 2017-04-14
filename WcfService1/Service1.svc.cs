@@ -12,6 +12,18 @@ namespace WcfService1
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        public void UploadString(string s)
+        {
+            DaemonRepository dr = new DaemonRepository();
+            tbDaemon d = new tbDaemon();
+            d.DaemonName = s;
+            d.Id = 50;
+            d.IpAddress = "adresa";
+            d.LastActive = DateTime.Now;
+            d.PcName = "pc name";
+            dr.InsertDaemon(d);
+
+        }
         public void UploadDaemon(Object o)
         {
             DaemonRepository dr = new DaemonRepository();             

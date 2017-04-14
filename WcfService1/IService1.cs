@@ -30,7 +30,7 @@ namespace WcfService1
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     [DataContract]
-    [Serializable()]
+    //[Serializable()]
     public class Daemon
     {
         [DataMember]

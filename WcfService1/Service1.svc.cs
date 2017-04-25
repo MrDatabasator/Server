@@ -24,6 +24,8 @@ namespace WcfService1
             dr.InsertDaemon(d);
 
         }
+
+        #region UploadClasses
         public void UploadDaemon(tbDaemon o)
         {
             DaemonRepository dear = new DaemonRepository();             
@@ -48,7 +50,25 @@ namespace WcfService1
             desr.InsertDestination(d);
 
         }
+        #endregion
 
+        #region DemonMethods
+        public void UpdateDaemonLastActive(int id)
+        {
+            /*dodělat*/
+        }
+        /*[OperationContract]
+        void UpdateDeamonLastActive(int id);
+        [OperationContract]
+        void CheckDeamonReference(int id);
+        [OperationContract]
+        void UpdateDeamonReference(int id, tbDaemon d);
+        [OperationContract]
+        void ExistDeamonTask(int id);
+        [OperationContract]
+        tbTask GetDeamonTask(int id);
+         */
+        #endregion
 
         public tbDaemon GetDaemon(tbDaemon o)
         {

@@ -25,6 +25,19 @@ namespace WcfService1
         [OperationContract]
         void UploadTask(tbTask t);
         #endregion
+        /*implementovat*/
+        #region DemonMethods
+        [OperationContract]
+        void UpdateDeamonLastActive(int id);
+        [OperationContract]
+        void CheckDeamonReference(int id);
+        [OperationContract]
+        void UpdateDeamonReference(int id, tbDaemon d);
+        [OperationContract]
+        void ExistDeamonTask(int id);
+        [OperationContract]
+        tbTask GetDeamonTask(int id);
+        #endregion
 
         [OperationContract]
         tbDaemon GetDaemon(tbDaemon o); 

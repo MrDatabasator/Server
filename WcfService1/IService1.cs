@@ -15,11 +15,19 @@ namespace WcfService1
         [OperationContract]
         void UploadString(string s);
 
+        #region uploadClasses
         [OperationContract]
-        void UploadDaemon(Object o);
+        void UploadDaemon(tbDaemon o);
+        [OperationContract]
+        void UploadDestination(tbDestination d);
+        [OperationContract]
+        void UploadLog(tbLog l);
+        [OperationContract]
+        void UploadTask(tbTask t);
+        #endregion
 
         [OperationContract]
-        Daemon GetDaemon(Daemon o); 
+        tbDaemon GetDaemon(tbDaemon o); 
 
         [OperationContract]
         string GetData(int value);
@@ -27,25 +35,10 @@ namespace WcfService1
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+
+
+
         // TODO: Add your service operations here
-    }
-
-
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    [DataContract]
-    //[Serializable()]
-    public class Daemon
-    {
-        [DataMember]
-        public int Id { get; set; }
-        [DataMember]
-        public string DaemonName { get; set; }
-        [DataMember]
-        public string PcName { get; set; }
-        [DataMember]
-        public DateTime LastActive { get; set; }
-        [DataMember]
-        public string IpAddress { get; set; }
     }
 
     [DataContract]

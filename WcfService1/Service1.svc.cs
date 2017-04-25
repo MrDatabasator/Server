@@ -24,13 +24,33 @@ namespace WcfService1
             dr.InsertDaemon(d);
 
         }
-        public void UploadDaemon(Object o)
+        public void UploadDaemon(tbDaemon o)
         {
-            DaemonRepository dr = new DaemonRepository();             
-            dr.InsertDaemon(o as tbDaemon);
+            DaemonRepository dear = new DaemonRepository();             
+            dear.InsertDaemon(o);
 
         }
-        public Daemon GetDaemon(Daemon o)
+        public void UploadTask(tbTask t)
+        {
+            TaskRepository tasr = new TaskRepository();
+            tasr.InsertTask(t);
+
+        }
+        public void UploadLog(tbLog l)
+        {
+            LogRepository logr = new LogRepository();
+            logr.InsertLog(l);
+
+        }
+        public void UploadDestination(tbDestination d)
+        {
+            DestinationRepository desr = new DestinationRepository();
+            desr.InsertDestination(d);
+
+        }
+
+
+        public tbDaemon GetDaemon(tbDaemon o)
         {
             //test
             o.DaemonName = "Server Upravil biš";

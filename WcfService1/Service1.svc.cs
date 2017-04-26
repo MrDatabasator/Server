@@ -77,22 +77,20 @@ namespace WcfService1
 
             return true;
         }
-        void UpdateDeamonReference(int id, tbDaemon d)
+        public void UpdateDeamonReference(int id, tbDaemon d)
         {
+            /*co to má dělat*/
             DaemonRepository dr = new DaemonRepository();
             dr.Update(d);
         }
-        /*[OperationContract]
-        void UpdateDeamonLastActive(int id);
-        [OperationContract]
-        void CheckDeamonReference(int id);
-        [OperationContract]
-        void UpdateDeamonReference(int id, tbDaemon d);
-        [OperationContract]
-        void ExistDeamonTask(int id);
-        [OperationContract]
-        tbTask GetDeamonTask(int id);
-         */
+        public void ExistDeamonTask(int id)
+        {
+
+        }/*
+        public tbTask GetDeamonTask(int id)
+        {
+           
+        }*/
         #endregion
 
         public tbDaemon GetDaemon(tbDaemon o)

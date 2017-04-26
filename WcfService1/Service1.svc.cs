@@ -55,6 +55,10 @@ namespace WcfService1
         #region DemonMethods
         public void UpdateDaemonLastActive(int id)
         {
+            DaemonRepository d = new DaemonRepository();
+            tbDaemon demon = d.FindById(id);
+            demon.LastActive = DateTime.Now;
+            d.Update(demon);
             /*dodělat*/
         }
         /*[OperationContract]

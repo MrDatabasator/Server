@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity.Migrations;
 
 namespace WcfService1
 {
@@ -28,9 +29,18 @@ namespace WcfService1
             this._context.Daemon.Remove(d);
             this._context.SaveChanges();
         }
+        public void Update(tbDaemon d)
+        {
+            //this._context.Daemon.Attach(d);
+            //this._context.Entry(d).State = System.Data.Entity.EntityState.Modified;           
+            this._context.Daemon.AddOrUpdate(d);
+            this._context.SaveChanges();
+        
+        }
         public void Test(string st)
         {
             
         } 
+
     }
 }

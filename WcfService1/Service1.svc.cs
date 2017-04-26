@@ -61,6 +61,27 @@ namespace WcfService1
             d.Update(demon);
             /*dodělat*/
         }
+        public bool CheckDeamonReference(int id)
+        {
+            DaemonRepository d = new DaemonRepository();
+
+            try
+            {
+                tbDaemon demon = d.FindById(id);
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
+            return true;
+        }
+        void UpdateDeamonReference(int id, tbDaemon d)
+        {
+            DaemonRepository dr = new DaemonRepository();
+            dr.Update(d);
+        }
         /*[OperationContract]
         void UpdateDeamonLastActive(int id);
         [OperationContract]

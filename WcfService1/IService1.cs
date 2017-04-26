@@ -29,11 +29,11 @@ namespace WcfService1
        #region DemonMethods
         [OperationContract]
         void UpdateDaemonLastActive(int id);
-       /* [OperationContract]
-        void CheckDeamonReference(int id);
+        [OperationContract]
+        bool CheckDeamonReference(int id);
         [OperationContract]
         void UpdateDeamonReference(int id, tbDaemon d);
-        [OperationContract]
+        /*[OperationContract]
         void ExistDeamonTask(int id);
         [OperationContract]
         tbTask GetDeamonTask(int id);*/

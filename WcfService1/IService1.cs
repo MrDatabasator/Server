@@ -28,7 +28,7 @@ namespace WcfService1
         /*implementovat*/
        #region DemonMethods
         [OperationContract]
-        void UpdateDeamonLastActive(int id);
+        void UpdateDaemonLastActive(int id);
        /* [OperationContract]
         void CheckDeamonReference(int id);
         [OperationContract]

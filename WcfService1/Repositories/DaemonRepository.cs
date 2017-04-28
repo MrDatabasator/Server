@@ -6,8 +6,7 @@ using System.Data.Entity.Migrations;
 
 namespace WcfService1
 {
-    public class DaemonRepository
-        //just for upload
+    public class DaemonRepository       
     {
         private MyContext _context = new MyContext();
 

@@ -15,7 +15,7 @@ namespace WcfService1
         [OperationContract]
         void UploadString(string s);
 
-        #region uploadClasses
+        #region UploadClasses
         [OperationContract]
         void UploadDaemon(tbDaemon o);
         [OperationContract]
@@ -25,7 +25,7 @@ namespace WcfService1
         [OperationContract]
         void UploadTask(tbTask t);
         #endregion      
-       #region DemonMethods
+        #region DemonMethods
         [OperationContract]
         void UpdateDaemonLastActive(int id);
         [OperationContract]
@@ -33,9 +33,9 @@ namespace WcfService1
         [OperationContract]
         void UpdateDeamonReference(int id, tbDaemon d);
         [OperationContract]
-        void ExistDeamonTask(int id);
-     /*   [OperationContract]
-        tbTask GetDeamonTask(int id);*/
+        bool ExistDeamonTask(int id);
+        [OperationContract]
+        List<tbTask> GetDeamonTask(int id);
         #endregion
 
         [OperationContract]

@@ -59,7 +59,6 @@ namespace WcfService1
             tbDaemon demon = d.FindById(id);
             demon.LastActive = DateTime.Now;
             d.Update(demon);
-            /*dodělat*/
         }
         public bool CheckDeamonReference(int id)
         {
@@ -71,7 +70,6 @@ namespace WcfService1
             }
             catch (Exception)
             {
-
                 return false;
             }
 
@@ -79,18 +77,22 @@ namespace WcfService1
         }
         public void UpdateDeamonReference(int id, tbDaemon d)
         {
-            /*co to má dělat*/
             DaemonRepository dr = new DaemonRepository();
             dr.Update(d);
         }
-        public void ExistDeamonTask(int id)
+        public bool ExistDeamonTask(int id)
         {
-
-        }/*
-        public tbTask GetDeamonTask(int id)
-        {
+            TaskRepository tr = new TaskRepository();
+            if (tr.FindAll().Where(x => x.DaemonId == id).ToList().Count > 0)
+                return true;
+            return false;
            
-        }*/
+        }
+        public List<tbTask> GetDeamonTask(int id)
+        {
+            TaskRepository tr = new TaskRepository();
+            return tr.FindAll().Where(x => x.DaemonId == id).ToList();
+        }
         #endregion
 
         public tbDaemon GetDaemon(tbDaemon o)

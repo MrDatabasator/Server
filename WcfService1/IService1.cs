@@ -40,6 +40,8 @@ namespace WcfService1
         #region AdminMethods
         [OperationContract]
         List<tbDaemon> GetAllDaemons();
+        /*[OperationContract]
+        List<tbTask> GetAllTasks();*/
         #endregion
 
         [OperationContract]

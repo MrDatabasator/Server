@@ -37,6 +37,10 @@ namespace WcfService1
         [OperationContract]
         List<tbTask> GetDeamonTask(int id);
         #endregion
+        #region AdminMethods
+        [OperationContract]
+        List<tbDaemon> GetAllDaemons();
+        #endregion
 
         [OperationContract]
         tbDaemon GetDaemon(tbDaemon o); 

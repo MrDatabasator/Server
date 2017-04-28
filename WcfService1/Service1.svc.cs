@@ -95,6 +95,13 @@ namespace WcfService1
         }
         #endregion
 
+        #region AdminMethods
+        public List<tbDaemon> GetAllDaemons()
+        {
+            DaemonRepository dr = new DaemonRepository();
+            return dr.FindAll().ToList();
+        }
+        #endregion
         public tbDaemon GetDaemon(tbDaemon o)
         {
             //test

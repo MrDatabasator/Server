@@ -37,6 +37,9 @@ namespace WcfService1
         [OperationContract]
         List<tbTask> GetDeamonTask(int id);
         [OperationContract]
+        void NewLogMessage(int DaemonId,string message);
+
+        [OperationContract]
         List<tbDestination> GetAllDestinations();
         #endregion
         #region AdminMethods

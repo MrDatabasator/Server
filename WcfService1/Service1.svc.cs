@@ -94,6 +94,14 @@ namespace WcfService1
             TaskRepository tr = new TaskRepository();
             return tr.FindAll().Where(x => x.DaemonId == id).ToList();
         }
+        public void NewLogMessage(int DaemonId, string message)
+        {
+            tbLog tl = new tbLog();
+            LogRepository lr = new LogRepository();
+            tl.DaemonId = DaemonId;
+            tl.Message = message;
+            lr.InsertLog(tl);
+        }
         #endregion
 
         #region AdminMethods

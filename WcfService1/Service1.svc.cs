@@ -102,6 +102,12 @@ namespace WcfService1
             DaemonRepository dr = new DaemonRepository();
             return dr.FindAll().ToList();
         }
+
+        public List<tbDestination> GetAllDestinations()
+        {
+            DestinationRepository desr = new DestinationRepository();
+            return desr.FindAll().ToList();
+        }
         #endregion
         public tbDaemon GetDaemon(tbDaemon o)
         {

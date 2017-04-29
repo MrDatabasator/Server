@@ -36,6 +36,8 @@ namespace WcfService1
         bool ExistDeamonTask(int id);
         [OperationContract]
         List<tbTask> GetDeamonTask(int id);
+        [OperationContract]
+        List<tbDestination> GetAllDestinations();
         #endregion
         #region AdminMethods
         [OperationContract]

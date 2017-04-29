@@ -28,5 +28,9 @@ namespace WcfService1
         [DataMember]
         public string TaskName { get; set; }
 
+        public override string ToString()
+        {
+            return TaskName +" "+ DaemonId +" " +TaskFinished;
+        }
     }
 }

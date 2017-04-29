@@ -27,5 +27,9 @@ namespace WcfService1
         [DataMember]
         public int RefreshRate { get; set; }
 
+        public override string ToString()
+        {
+            return DaemonName + " " + PcName + " " + IpAddress + " " + LastActive +" "+ RefreshRate ;
+        }
     }
 }

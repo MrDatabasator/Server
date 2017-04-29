@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 namespace WcfService1
@@ -10,9 +12,16 @@ namespace WcfService1
     [Table("navrh_destination_v1")]
     public class tbDestination
     {
-        [Key]
+        [Key, DataMember, Browsable(false)]
         public int Id { get; set; }
+        [DataMember]
         public string Type { get; set; }
+        [DataMember]
         public virtual List<tbTask> LTask { get; set; }
+
+        public override string ToString()
+        {
+            return Type;
+        }
     }
 }

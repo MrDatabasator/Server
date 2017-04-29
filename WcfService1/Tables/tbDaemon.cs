@@ -24,6 +24,8 @@ namespace WcfService1
         public DateTime LastActive { get; set; }
         [DataMember]
         public string IpAddress { get; set; }
+        [DataMember]
+        public int RefreshRate { get; set; }
 
     }
 }

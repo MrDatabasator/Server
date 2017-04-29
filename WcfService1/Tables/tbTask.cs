@@ -23,6 +23,10 @@ namespace WcfService1
         public int TaskFinished { get; set; }
         [DataMember]
         public virtual List<tbDestination> LDestination { get; set; }
+        [DataMember]
+        public DateTime LastTaskCommit { get; set; }
+        [DataMember]
+        public string TaskName { get; set; }
 
     }
 }

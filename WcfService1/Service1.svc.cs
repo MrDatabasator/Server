@@ -21,6 +21,7 @@ namespace WcfService1
             d.IpAddress = "adresa";
             d.LastActive = DateTime.Now;
             d.PcName = "pc name";
+            d.RefreshRate = 5;
             dr.InsertDaemon(d);
 
         }

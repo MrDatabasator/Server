@@ -27,6 +27,8 @@ namespace WcfService1
         public DateTime LastTaskCommit { get; set; }
         [DataMember]
         public string TaskName { get; set; }
+        [DataMember,ForeignKey("DaemonId")]
+        public virtual tbDaemon Daemon { get; set; }
 
         public override string ToString()
         {

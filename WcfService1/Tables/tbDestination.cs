@@ -9,7 +9,9 @@ using System.Web;
 
 namespace WcfService1
 {
-    [Table("navrh_destination_v1")]
+    [Table("navrh_destination_v1")]    
+    [DataContractAttribute(IsReference = true)]
+    [Serializable()]
     public class tbDestination
     {
         [Key, DataMember, Browsable(false)]

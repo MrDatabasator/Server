@@ -9,7 +9,8 @@ using System.Web;
 
 namespace WcfService1
 {
-    [DataContract]
+    [DataContractAttribute(IsReference = true)]
+    [Serializable()]
     [Table("navrh_task_v1")]
     public class tbTask
     {

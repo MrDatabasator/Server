@@ -15,6 +15,7 @@ namespace WcfService1
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            base.Configuration.ProxyCreationEnabled = false;
             base.OnModelCreating(modelBuilder);
             modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.PluralizingTableNameConvention>();
 

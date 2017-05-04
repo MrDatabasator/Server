@@ -122,12 +122,12 @@ namespace WcfService1
         List<tbDestination> FindDestinationsByTaskId(int id)
         {
             DestinationRepository desr = new DestinationRepository();
-            desr.
+            return desr.FindByTaskId(id);
         }
         
         List<tbTask> FindTasksByDestinationId(int id)
         {
-
+            return new List<tbTask>();
         }
         public tbDaemon GetDaemon(tbDaemon o)
         {

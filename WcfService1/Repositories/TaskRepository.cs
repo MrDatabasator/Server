@@ -17,6 +17,10 @@ namespace WcfService1
         {
             return this._context.Task.Find(id);
         }
+        /*public List<tbTask> FindByDestinationId(int id)
+        {
+            return this._context.Task.Where(x => x.).ToList<tbTask>();
+        }*/
         public void InsertTask(tbTask d)
         {
             this._context.Task.Add(d);

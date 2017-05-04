@@ -19,8 +19,7 @@ namespace WcfService1
         public DbSet<tbTask> Task { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            base.Configuration.ProxyCreationEnabled = false;
+        {            
             base.OnModelCreating(modelBuilder);
             modelBuilder.Conventions.Remove<System.Data.Entity.ModelConfiguration.Conventions.PluralizingTableNameConvention>();
 

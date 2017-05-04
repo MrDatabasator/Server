@@ -19,7 +19,7 @@ namespace WcfService1
         [DataMember]
         public string TaskName { get; set; }
         [DataMember, Browsable(false)]
-        public int DaemonId { get; set; }
+        public int DaemonId { get; set; }       
         [DataMember]
         public string KornExpression { get; set; }
         [DataMember]
@@ -28,8 +28,8 @@ namespace WcfService1
         public virtual List<tbDestination> LDestination { get; set; }
         [DataMember]
         public DateTime LastTaskCommit { get; set; }       
-        [DataMember,ForeignKey("DaemonId")]
-        public virtual tbDaemon Daemon { get; set; }
+        /*[DataMember,ForeignKey("DaemonId"),Browsable(false)]
+        public virtual tbDaemon Daemon { get; set; }*/
 
         public override string ToString()
         {

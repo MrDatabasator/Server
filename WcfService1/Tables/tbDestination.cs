@@ -17,7 +17,14 @@ namespace WcfService1
         [Key, DataMember, Browsable(false)]
         public int Id { get; set; }
         [DataMember]
+        public int TaskId { get; set; }
+        [DataMember]
         public string Type { get; set; }
+        [DataMember]
+        public string NetSourcePath { get; set; }
+        [DataMember]
+        public string NetDestinationPath { get; set; }
+        
         [DataMember]
         public virtual List<tbTask> LTask { get; set; }
 

@@ -31,7 +31,11 @@ namespace WcfService1
         [OperationContract]
         bool CheckDeamonReference(int id);
         [OperationContract]
-        void UpdateDeamonReference(int id, tbDaemon d);
+        void UpdateDeamonReference(int id, tbDaemon d);        
+        [OperationContract]
+        List<tbDestination> FindDestinationByTaskId(int id);
+        [OperationContract]
+        List<tbTask> FindTaskByDestinationId(int id);
         [OperationContract]
         bool ExistDeamonTask(int id);
         [OperationContract]

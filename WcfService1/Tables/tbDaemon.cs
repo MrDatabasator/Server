@@ -29,7 +29,7 @@ namespace WcfService1
 
         public override string ToString()
         {
-            return DaemonName + " " + PcName + " " + IpAddress + " " + LastActive +" "+ RefreshRate ;
+            return DaemonName + " " + PcName + " " + IpAddress + " " + LastActive +" "+ RefreshRate;
         }
     }
 }

@@ -27,6 +27,8 @@ namespace WcfService1
         #endregion      
         #region DemonMethods
         [OperationContract]
+        int UploadDaemonReference(tbDaemon o);
+        [OperationContract]
         void UpdateDaemonLastActive(int id);
         [OperationContract]
         bool CheckDeamonReference(int id);

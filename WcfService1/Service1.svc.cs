@@ -54,6 +54,12 @@ namespace WcfService1
         #endregion
 
         #region DemonMethods
+        public int UploadDaemonReference(tbDaemon o)
+        {
+            DaemonRepository dear = new DaemonRepository();
+            dear.InsertDaemon(o);
+            return dear.FindAll().LastOrDefault().Id;
+        }
         public void UpdateDaemonLastActive(int id)
         {
             DaemonRepository d = new DaemonRepository();

@@ -12,7 +12,16 @@ namespace WcfService1
 
         public List<tbDaemon> FindAll()
         {
-            return this._context.Daemon.ToList<tbDaemon>();
+            try
+            {
+                return this._context.Daemon.ToList<tbDaemon>();
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            
         }
         public tbDaemon FindById(int id)
         {

@@ -8,6 +8,11 @@ namespace WcfService1
 {
     public class MyContext : DbContext
     {
+        public MyContext()
+        {
+            this.Configuration.ProxyCreationEnabled = false;
+        }
+
         public DbSet<tbDaemon> Daemon { get; set; }
         public DbSet<tbDestination> Destination { get; set; }
         public DbSet<tbLog> Log { get; set; }

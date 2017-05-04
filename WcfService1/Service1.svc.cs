@@ -119,16 +119,17 @@ namespace WcfService1
         #endregion
 
         
-        List<tbDestination> FindDestinationsByTaskId(int id)
+        public List<tbDestination> FindDestinationByTaskId(int id)
         {
             DestinationRepository desr = new DestinationRepository();
             return desr.FindByTaskId(id);
         }
         
-        List<tbTask> FindTasksByDestinationId(int id)
+        public List<tbTask> FindTaskByDestinationId(int id)
         {
             return new List<tbTask>();
         }
+
         public tbDaemon GetDaemon(tbDaemon o)
         {
             //test

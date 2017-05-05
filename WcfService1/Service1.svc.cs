@@ -122,9 +122,14 @@ namespace WcfService1
             DestinationRepository desr = new DestinationRepository();
             return desr.FindAll().ToList();
         }
+        public int UploadTaskReference(tbTask t)
+        {
+            TaskRepository tr = new TaskRepository();
+            tr.InsertTask(t);
+            return tr.FindAll().LastOrDefault().Id;
+        }
         #endregion
 
-        
         public List<tbDestination> FindDestinationByTaskId(int id)
         {
             DestinationRepository desr = new DestinationRepository();

@@ -18,8 +18,8 @@ namespace WcfService1
         public int DaemonId { get; set; }
         [DataMember]
         public string Message { get; set; }
-        [DataMember, ForeignKey("DaemonId")]
-        public virtual tbDaemon Daemon { get; set; }
+        /*[DataMember, ForeignKey("DaemonId")]
+        public virtual tbDaemon Daemon { get; set; }*/
 
         public override string ToString()
         {

@@ -16,7 +16,7 @@ namespace WcfService1
     {
         [Key, DataMember, Browsable(false)]
         public int Id { get; set; }
-        [DataMember]
+        [DataMember, Browsable(false)]
         public int TaskId { get; set; }
         [DataMember]
         public string Type { get; set; }

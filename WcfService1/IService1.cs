@@ -54,6 +54,12 @@ namespace WcfService1
 
         [OperationContract]
         int UploadTaskReference(tbTask t);
+        [OperationContract]
+        void DeleteTask(tbTask t);
+        [OperationContract]
+        void DeleteDestination(tbDestination d);
+        [OperationContract]
+        void AutoDeleteTask(tbTask t); // deletes task and all its destinations
         /*[OperationContract]
         List<tbTask> GetAllTasks();*/
         #endregion

@@ -128,6 +128,24 @@ namespace WcfService1
             tr.InsertTask(t);
             return tr.FindAll().LastOrDefault().Id;
         }
+        public void DeleteTask(tbTask t)
+        {
+            TaskRepository tr = new TaskRepository();
+            tr.Remove(t);
+        }        
+        public void DeleteDestination(tbDestination d)
+        {
+            DestinationRepository dr = new DestinationRepository();
+            dr.Remove(d);
+        }        
+        public void AutoDeleteTask(tbTask t)
+        {
+            TaskRepository tr = new TaskRepository();
+            DestinationRepository dr = new DestinationRepository();
+            foreach (tbDestination des in dr.FindByTaskId(t.Id))
+                dr.Remove(des);
+            tr.Remove(t);
+        }
         #endregion
 
         public List<tbDestination> FindDestinationByTaskId(int id)

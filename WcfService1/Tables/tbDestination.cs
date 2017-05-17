@@ -20,6 +20,8 @@ namespace WcfService1
         public int TaskId { get; set; }
         [DataMember]
         public string Type { get; set; }
+        [DataMember, Column("FullBackup")]
+        public bool FullBackup { get; set; }
         [DataMember]
         public string NetSourcePath { get; set; }
         [DataMember]

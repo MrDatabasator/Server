@@ -27,7 +27,8 @@ namespace WcfService1
             this._context.SaveChanges();
         }
         public void Remove(tbTask d)
-        {
+        {          
+
             this._context.Task.Remove(d);
             this._context.SaveChanges();
         }

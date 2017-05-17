@@ -22,8 +22,8 @@ namespace WcfService1
         public int DaemonId { get; set; }       
         [DataMember]
         public string KornExpression { get; set; }
-        [DataMember]
-        public int TaskFinished { get; set; }
+        [DataMember, Column("TaskFinished")]
+        public bool TaskFinished { get; set; }
         [DataMember]
         public virtual List<tbDestination> LDestination { get; set; }
         [DataMember]

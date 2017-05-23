@@ -141,9 +141,9 @@ namespace WcfService1
         public void AutoDeleteTask(tbTask t)
         {
             TaskRepository tr = new TaskRepository();
-            /*DestinationRepository dr = new DestinationRepository();
+            DestinationRepository dr = new DestinationRepository();
             foreach (tbDestination des in dr.FindByTaskId(t.Id))
-                dr.Remove(des);*/
+                dr.Remove(des);
             tr.Remove(t);
         }
         #endregion

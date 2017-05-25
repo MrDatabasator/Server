@@ -26,7 +26,12 @@ namespace WcfService1
         public string NetSourcePath { get; set; }
         [DataMember]
         public string NetDestinationPath { get; set; }
-        
+        [DataMember]
+        public string FtpServerAddress { get; set; }
+        [DataMember]
+        public string FtpUsername { get; set; }
+        [DataMember]
+        public string FtpPassword { get; set; }
         [DataMember]
         public virtual List<tbTask> LTask { get; set; }
 

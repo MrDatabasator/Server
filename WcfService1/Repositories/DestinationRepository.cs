@@ -28,9 +28,12 @@ namespace WcfService1
         }
         public void Remove(tbDestination d)
         {
-            tbDestination tbDes = FindById(d.Id);
-            this._context.Destination.Remove(tbDes);
-            this._context.SaveChanges();
+            if (d != null)
+            {
+                tbDestination tbDes = FindById(d.Id);
+                this._context.Destination.Remove(tbDes);
+                this._context.SaveChanges();
+            }
         }
     }
 }

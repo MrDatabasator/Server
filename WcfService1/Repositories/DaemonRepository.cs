@@ -41,7 +41,7 @@ namespace WcfService1
         {
             //this._context.Daemon.Attach(d);
             //this._context.Entry(d).State = System.Data.Entity.EntityState.Modified;           
-            this._context.Daemon.AddOrUpdate(d);
+            this._context.Daemon.AddOrUpdate(d);            
             this._context.SaveChanges();
         
         }

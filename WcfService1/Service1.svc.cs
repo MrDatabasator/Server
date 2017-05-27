@@ -70,7 +70,8 @@ namespace WcfService1
         public bool CheckDeamonReference(int id)
         {
             DaemonRepository d = new DaemonRepository();
-
+            if (id == 0)
+                return false;
             try
             {
                 tbDaemon demon = d.FindById(id);
@@ -85,7 +86,9 @@ namespace WcfService1
         public void UpdateDeamonReference(int id, tbDaemon d)
         {
             DaemonRepository dr = new DaemonRepository();
-            dr.Update(d);
+            tbDaemon daemon = dr.FindById(id);
+            if(daemon != d)
+                dr.Update(d);
         }
         public bool ExistDeamonTask(int id)
         {

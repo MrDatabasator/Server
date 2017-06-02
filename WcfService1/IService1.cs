@@ -44,6 +44,12 @@ namespace WcfService1
         List<tbTask> GetDeamonTask(int id);
         [OperationContract]
         void NewLogMessage(int DaemonId,string message);
+        [OperationContract]
+        void UpdateTaskFinished(int id, bool finished);
+        [OperationContract]
+        void UpdateTaskRefrence(int id, tbTask t);
+        [OperationContract]
+        void UpdateTaskLastCommit(int id);
 
         [OperationContract]
         List<tbDestination> GetAllDestinations();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity.Migrations;
 
 namespace WcfService1
 {
@@ -34,6 +35,14 @@ namespace WcfService1
                 this._context.Task.Remove(dbTask);
                 this._context.SaveChanges();
             }
+        }
+        public void Update(tbTask t)
+        {
+            //this._context.Daemon.Attach(d);
+            //this._context.Entry(d).State = System.Data.Entity.EntityState.Modified;           
+            this._context.Task.AddOrUpdate(t);
+            this._context.SaveChanges();
+
         }
     }
 }

@@ -90,6 +90,30 @@ namespace WcfService1
             if(daemon != d)
                 dr.Update(d);
         }
+        public void UpdateTaskFinished(int id, bool finished)
+        {
+            TaskRepository tr = new TaskRepository();
+            tbTask task = tr.FindById(id);
+            if (finished)
+                task.TaskFinished = 1;
+            else
+                task.TaskFinished = 0;
+            tr.Update(task); 
+        }
+        public void UpdateTaskLastCommit(int id)
+        {
+            TaskRepository tr = new TaskRepository();
+            tbTask task = tr.FindById(id);
+            task.LastTaskCommit = DateTime.Now;
+            tr.Update(task);
+        }
+        public void UpdateTaskRefrence(int id, tbTask t)
+        {
+            TaskRepository tr = new TaskRepository();
+            tbTask task = tr.FindById(id);
+            if (task != t)
+                tr.Update(t);            
+        }
         public bool ExistDeamonTask(int id)
         {
             TaskRepository tr = new TaskRepository();

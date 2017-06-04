@@ -83,12 +83,22 @@ namespace WcfService1
 
             return true;
         }
-        public void UpdateDeamonReference(int id, tbDaemon d)
+        public bool DaemonReferenceOutdated(int id, tbDaemon d)
         {
             DaemonRepository dr = new DaemonRepository();
             tbDaemon daemon = dr.FindById(id);
-            if(daemon != d)
-                dr.Update(d);
+            return CompareDaemons(d, daemon);
+        }
+        public void UpdateDeamonReferenceUpload(tbDaemon d)
+        {
+            DaemonRepository dr = new DaemonRepository();            
+            dr.Update(d);
+        }
+        public tbDaemon UpdateDeamonReferenceGet(int id)
+        {
+            DaemonRepository dr = new DaemonRepository();
+            tbDaemon daemon = dr.FindById(id);
+            return daemon;
         }
         public void UpdateTaskFinished(int id, bool finished)
         {
@@ -208,6 +218,13 @@ namespace WcfService1
                 composite.StringValue += "Suffix";
             }
             return composite;
+        }
+        private bool CompareDaemons(tbDaemon d1, tbDaemon d2) //true = not the same ;
+        {
+            if (d1.Equals(d2))
+                return false;
+            else
+                return true;
         }
     }
 }

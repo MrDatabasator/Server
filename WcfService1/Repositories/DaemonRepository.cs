@@ -42,6 +42,11 @@ namespace WcfService1
             //this._context.Daemon.Attach(d);
             //this._context.Entry(d).State = System.Data.Entity.EntityState.Modified;           
             this._context.Daemon.AddOrUpdate(d);            
+            /*tbDaemon x = this.FindById(d.Id);
+
+            x.DaemonName = d.DaemonName;
+            x.RefreshRate = d.RefreshRate;*/
+
             this._context.SaveChanges();
         
         }

@@ -91,7 +91,8 @@ namespace WcfService1
         }
         public void UpdateDeamonReferenceUpload(tbDaemon d)
         {
-            DaemonRepository dr = new DaemonRepository();            
+            DaemonRepository dr = new DaemonRepository();
+            tbDaemon daemon = dr.FindById(d.Id);            
             dr.Update(d);
         }
         public tbDaemon UpdateDeamonReferenceGet(int id)
@@ -226,5 +227,13 @@ namespace WcfService1
             else
                 return true;
         }
+        private tbDaemon UpdateDaemon(tbDaemon original, tbDaemon update)
+        {
+            /*original.DaemonName = update.DaemonName;
+            original.RefreshRate = update.RefreshRate;*/
+
+            return original;
+        }
+
     }
 }

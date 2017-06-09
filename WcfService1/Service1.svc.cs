@@ -104,7 +104,7 @@ namespace WcfService1
         public void UpdateTaskFinished(int id, bool finished)
         {
             TaskRepository tr = new TaskRepository();
-            tbTask task = tr.FindById(id);
+            tbTask task = tr.FindAll().Where(x => x.DaemonId == id).FirstOrDefault();
             if (finished)
                 task.TaskFinished = 1;
             else
@@ -114,7 +114,7 @@ namespace WcfService1
         public void UpdateTaskLastCommit(int id)
         {
             TaskRepository tr = new TaskRepository();
-            tbTask task = tr.FindById(id);
+            tbTask task = tr.FindAll().Where(x => x.DaemonId == id).FirstOrDefault();
             task.LastTaskCommit = DateTime.Now;
             tr.Update(task);
         }

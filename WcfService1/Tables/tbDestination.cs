@@ -33,6 +33,8 @@ namespace WcfService1
         [DataMember]
         public string FtpPassword { get; set; }
         [DataMember]
+        public string WorkingDirectory { get; set; }
+        [DataMember]
         public virtual List<tbTask> LTask { get; set; }
 
         public override string ToString()

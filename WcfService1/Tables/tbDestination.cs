@@ -39,7 +39,13 @@ namespace WcfService1
 
         public override string ToString()
         {
-            return Type;
+            if (Type == "Local")
+                return "Local";
+            else if (Type == "FTP")
+                return "FTP";
+            else if (Type == "SSH")
+                return "SSH";
+            return "ERROR.DO.NOT.USE";
         }
     }
 }

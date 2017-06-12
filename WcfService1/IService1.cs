@@ -66,6 +66,8 @@ namespace WcfService1
         [OperationContract]
         int UploadTaskReference(tbTask t);
         [OperationContract]
+        tbDaemon GetDaemonById(int id);
+        [OperationContract]
         void DeleteTask(tbTask t);
         [OperationContract]
         void DeleteDestination(tbDestination d);

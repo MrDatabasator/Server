@@ -149,6 +149,11 @@ namespace WcfService1
         #endregion
 
         #region AdminMethods
+        public tbDaemon GetDaemonById(int id)
+        {
+            DaemonRepository dr = new DaemonRepository();
+            return dr.FindById(id);
+        }
         public List<tbDaemon> GetAllDaemons()
         {
             DaemonRepository dr = new DaemonRepository();

@@ -47,7 +47,7 @@ namespace WcfService1
         [OperationContract]
         List<tbTask> GetDeamonTask(int id);
         [OperationContract]
-        void NewLogMessage(int DaemonId,string message);
+        void NewLogMessage(int DaemonId, string message);
         [OperationContract]
         void UpdateTaskFinished(int id, bool finished);
         [OperationContract]
@@ -61,7 +61,8 @@ namespace WcfService1
         #region AdminMethods
         [OperationContract]
         List<tbDaemon> GetAllDaemons();
-
+        [OperationContract]
+        List<tbLog> GetAllStatsLogs();
         [OperationContract]
         int UploadTaskReference(tbTask t);
         [OperationContract]

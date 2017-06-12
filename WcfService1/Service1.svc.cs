@@ -220,6 +220,11 @@ namespace WcfService1
             }
             return composite;
         }
+        public List<tbLog> GetAllStatsLogs()
+        {
+            LogRepository lr = new LogRepository();
+            return lr.FindAll().Where(x => x.Message.StartsWith("STATS")).ToList();
+        }
         private bool CompareDaemons(tbDaemon d1, tbDaemon d2) //true = not the same ;
         {
             if (d1.Equals(d2))

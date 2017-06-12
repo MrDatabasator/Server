@@ -18,6 +18,8 @@ namespace WcfService1
         public int DaemonId { get; set; }
         [DataMember]
         public string Message { get; set; }
+        [DataMember]
+        public DateTime Time { get; set; }
         /*[DataMember, ForeignKey("DaemonId")]
         public virtual tbDaemon Daemon { get; set; }*/
 

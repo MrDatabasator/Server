@@ -26,6 +26,8 @@ namespace WcfService1
         public string IpAddress { get; set; }
         [DataMember]
         public int RefreshRate { get; set; }
+        [DataMember]
+        public string ClientMail { get; set; }
 
         public override string ToString()
         {
